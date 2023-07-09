@@ -1,6 +1,7 @@
 package com.example.halisaham.service
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.halisaham.model.Reservation
@@ -9,12 +10,12 @@ import com.example.halisaham.model.Reservation
 interface ReservationDao {
 
     @Insert
-    suspend fun addData(vararg reservation: Reservation)
+    suspend fun addData(reservation: Reservation)
 
     @Query("SELECT * FROM reservation")
     suspend fun getAllReservations() : List<Reservation>
 
-    @Query("DELETE FROM reservation")
-    suspend fun deleteAllReservation()
+    @Delete
+    suspend fun deleteAllReservation(reservation: Reservation)
 
 }
