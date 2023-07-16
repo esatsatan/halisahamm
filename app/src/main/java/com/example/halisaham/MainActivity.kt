@@ -19,6 +19,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.halisaham.components.CustomAppBar
 import com.example.halisaham.ui.theme.HalisahamTheme
 import com.example.halisaham.view.HomeScreen
 import dagger.hilt.android.AndroidEntryPoint
@@ -26,6 +27,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -35,6 +37,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+
 
                     val navController = rememberNavController()
                     NavHost(navController = navController, startDestination = "Deneme") {

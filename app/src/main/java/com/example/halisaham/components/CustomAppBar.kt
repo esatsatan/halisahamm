@@ -28,9 +28,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.halisaham.R
 
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CustomAppBar() {
+  fun CustomAppBar() {
         TopAppBar(
             modifier = Modifier
                 .clip(shape = RoundedCornerShape(12.dp))
@@ -49,8 +50,3 @@ fun CustomAppBar() {
 
 }
 
-@Preview
-@Composable
-fun CustomAppBarPreview() {
-    CustomAppBar()
-}
